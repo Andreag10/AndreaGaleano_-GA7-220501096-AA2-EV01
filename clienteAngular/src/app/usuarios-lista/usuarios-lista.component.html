@@ -1,0 +1,20 @@
+<div class="contenedor">
+<h2>Lista de Usuarios</h2>
+<table class="nombres">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let usuario of usuarios">
+    <td>{{ usuario.id }}</td>
+    <td>{{ usuario.nombre }}</td>
+    <td>{{ usuario.correo }}</td>
+    <td>
+      <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+    </td>
+  </tr>
+</table>
+<button routerLink="/agregar-usuario">Agregar Usuario</button>
+</div>

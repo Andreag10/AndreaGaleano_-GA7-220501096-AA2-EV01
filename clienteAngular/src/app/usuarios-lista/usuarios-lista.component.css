@@ -1,0 +1,78 @@
+.contenedor
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(86, 143, 124);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px red;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+table.nombres
+{
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo para las cabeceras */
+  th {
+    background-color: #bd52bd;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Estilo para las filas de la tabla */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  /* Estilo para los botones */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #bb55aa;
+  }
+  
+  button:active {
+    background-color: #c45bad;
+  }
+  
+  /* Estilo para el botón "Agregar Usuario" */
+  button.routerLink {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
