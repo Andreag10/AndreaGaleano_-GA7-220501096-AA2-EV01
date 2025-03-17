@@ -10,6 +10,7 @@ import { Usuario } from '../usuario.model';
 })
 export class UsuarioFormComponent implements OnInit {
 
+  //objeto para almacenar los datos del usuario
   usuario: Usuario = new Usuario(0, '', '');
 
   constructor(
@@ -18,6 +19,8 @@ export class UsuarioFormComponent implements OnInit {
     private router: Router
   ) { }
 
+  //Metodo que se ejecuta al inicializar el componente.
+  //verifica si existe un ID en la ruta para editar un usuario
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -27,12 +30,16 @@ export class UsuarioFormComponent implements OnInit {
     }
   }
 
+
+  //Guarda o actualiza un usuario segun si tiene ID o no.
   guardarUsuario(): void {
     if (this.usuario.id === 0) {
+      //llama al servicio para crear un nuevo usuario
       this.usuarioService.crearUsuario(this.usuario).subscribe(() => {
         this.router.navigate(['/usuarios']);
       });
     } else {
+      //llama al servicio para actualizar un usuario existente
       this.usuarioService.actualizarUsuario(this.usuario.id, this.usuario).subscribe(() => {
         this.router.navigate(['/usuarios']);
       });
